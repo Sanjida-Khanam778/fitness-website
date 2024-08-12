@@ -66,7 +66,7 @@ p {
 }
 
 .header{
-  background-image: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+  background-image: linear-gradient(180.00deg, rgba(0, 0, 0, 1), rgba(119, 119, 119, 0.3), rgba(119, 119, 119, 0.3), rgba(0, 0, 0, 1) 100%);
   margin-bottom: 6.25em;
 }
 
@@ -121,9 +121,7 @@ p {
   display: none;
 }
 
-.header{
-  background-image: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
-}
+
 
 /* banner related styles */
 
@@ -156,7 +154,12 @@ p {
 }
 
 .banner-text-container #download-btn {
-  background-color: black;
+  padding: 16px 40px 16px 40px;
+  border-radius: 42px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
   margin-left: 1rem;
 }
@@ -265,6 +268,48 @@ p {
   line-height: 18px;
 }
 
+/* run section styles */
+
+.run{
+  padding: 30px 32px 29px 50px;
+  border-radius: 18px;
+  /* justify-content: space-between; */
+  gap: 165px;
+  background: rgb(34, 34, 34);
+  align-items: center;
+  margin-top: 100px;
+}
+
+.run-text-container{
+  max-width: 26em;
+  margin: 11px 0;
+}
+
+.run-text-container h2{
+
+}
+
+.run-text-container p{
+  text-align: start;
+  margin-top: 14px;
+  margin-bottom: 34px;
+}
+
+.run-text-container button{
+  padding: 16px 71px 16px 71px;
+}
+
+.run-img-container{
+  max-width: 470px;
+}
+
+.run-img-container img{
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: none;
+  object-position: 70% 30%;
+}
 
 @media screen and (max-width: 576px) {
   .container{
@@ -286,7 +331,8 @@ p {
   .nav-bar{
     padding-top: 52px;
   }
-  .banner{
+  .banner,
+  .run{
     flex-direction: column;
     gap: 1rem;
   }
@@ -304,8 +350,14 @@ p {
   .show-btn{
     display: none;
   }
+  .banner-text-container #download-btn{
+    margin-left: 0;
+    padding: 16px 20px;
+
+  }
   .btn-primary{
-    padding: 16px 38.7px;
+    padding: 16px 20px;
+    width: 170px;
   }
   .btn-container{
     justify-content: space-between;
@@ -372,6 +424,19 @@ p {
     top: -95px;
     z-index: 1;
   }
-
+  .run{
+    padding: 32px 33px;
+  }
+  .run-img-container{
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .run-img-container img{
+    object-fit: contain;
+  }
+  .run-text-container button{
+    padding: 16px 20px;
+    width: 100%;
+  }
 }
 
