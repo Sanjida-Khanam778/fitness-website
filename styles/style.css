@@ -37,6 +37,12 @@ h2 {
   font-weight: 900;  
 }
 
+h4 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0;
+}
+
 h5{
   font-size: 1.125em;
   font-weight: 600;
@@ -243,7 +249,7 @@ p {
   margin-bottom: 3.6em;
 }
 
-.habits h2, p{
+.habits h2, .habit-p{
   text-align: center;
 }
 
@@ -311,6 +317,86 @@ p {
   object-position: 70% 30%;
 }
 
+/* bmi section related styles */
+
+.bmi-text-container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bmi-text-container .bmi-para{
+  text-align: left;
+}
+
+.bmi-text-container h2{
+  margin-top: 50px;
+  margin-bottom: 14px;
+}
+
+.bmi{
+  margin-top: 88px;
+  background: rgb(34, 34, 34);
+  padding: 50px 190px;
+  gap: 150px;
+}
+
+.chart table, th, td{
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-collapse: collapse;
+  padding: 15px 30px;
+}
+
+table{
+  margin-top: 52px;
+}
+
+th{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+td{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.calc{
+  max-width: 570px;
+}
+
+.calc p{
+  margin-top: 14px;
+  margin-bottom: 34px;
+}
+
+.form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+#factor{
+  grid-column: span 2;
+}
+
+input, select{
+  padding: 12px 40px 12px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.calc button{
+  margin-top: 35px;
+  padding: 16px 80px;
+}
+
 @media screen and (max-width: 576px) {
   .container{
     width: 90%;
@@ -332,7 +418,8 @@ p {
     padding-top: 52px;
   }
   .banner,
-  .run{
+  .run,
+  .bmi{
     flex-direction: column;
     gap: 1rem;
   }
@@ -438,5 +525,25 @@ p {
     padding: 16px 20px;
     width: 100%;
   }
+  .bmi{
+    margin-top: 32px;
+    background: rgb(34, 34, 34);
+    padding: 34px 20px;
+    gap: 50px;
+  }
+  .form{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  input, select{
+    padding: 12px 0px 12px 20px;
+  }
+  .calc button{
+    width: auto;
+  }
+  .bmi h4{
+    font-size: 16px;
+    font-weight: 900;
+  }
+ 
 }
 
