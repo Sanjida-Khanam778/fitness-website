@@ -696,16 +696,15 @@ option{
   }
   .form{
     grid-template-columns: repeat(1, 1fr);
-    /* position: relative; */
+    border: 2px solid red;
   }
   input, select{
     padding: 12px 0px 12px 20px;
+    min-width: 0;
   }
-
   select{
     appearance: none;
   }
-
   .calc button{
     width: auto;
   }
@@ -748,5 +747,6 @@ option{
     position: relative;
     text-align: justify;
   }
+
 }
 
