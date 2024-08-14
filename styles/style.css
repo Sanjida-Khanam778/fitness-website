@@ -696,7 +696,6 @@ option{
   }
   .form{
     grid-template-columns: repeat(1, 1fr);
-    border: 2px solid red;
   }
   input, select{
     padding: 12px 0px 12px 20px;
