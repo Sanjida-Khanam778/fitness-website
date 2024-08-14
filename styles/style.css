@@ -75,6 +75,7 @@ p {
   font-size: 1.12rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .header{
@@ -416,6 +417,7 @@ td{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  position: relative;
 }
 
 #factor{
@@ -427,11 +429,34 @@ input, select{
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   border: none;
+  appearance: none;
   color: rgba(255, 255, 255, 0.6);
 }
 
 input::placeholder{
   color: rgba(255, 255, 255, 0.6);
+}
+
+.fa-chevron-down{
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow1{
+  right: 23px;
+  top: 115px;
+}
+
+.arrow2{
+  right: 23px;
+  top: 64px;
+}
+
+option{
+  background: rgb(43, 42, 42);
+  color: rgb(150, 146, 146);
+  padding-top: 10px: ;
 }
 
 .calc button{
@@ -670,10 +695,16 @@ input::placeholder{
   }
   .form{
     grid-template-columns: repeat(1, 1fr);
+    /* position: relative; */
   }
   input, select{
     padding: 12px 0px 12px 20px;
   }
+
+  select{
+    appearance: none;
+  }
+
   .calc button{
     width: auto;
   }
